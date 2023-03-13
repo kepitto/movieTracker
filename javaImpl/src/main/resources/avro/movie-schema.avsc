@@ -1,0 +1,22 @@
+{
+    "type": "record",
+    "name": "Movie",
+    "namespace": "com.example.kafka",
+    "fields": [
+    {
+        "name": "id",
+        "type": "int"
+    },
+    {
+        "name": "MovieName",
+        "type": "string"
+    },
+    {
+        "name": "Rating",
+        "type": "float"
+    },
+    {
+        "name": "Genre",
+        "type": "string"
+    }]
+}
