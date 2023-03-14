@@ -14,7 +14,7 @@ public class KafkaTopicConfig {
     }
 
     @Bean
-    public NewTopic genreAvgRatingTopic(){
-        return TopicBuilder.name("genreAvgRating").partitions(3).build();
+    public NewTopic averageHypeFactorTopic(){
+        return TopicBuilder.name("AVERAGE_HYPE_FACTOR_UPDATED").partitions(3).build();
     }
 }

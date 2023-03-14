@@ -22,5 +22,10 @@
         "name": "Genre",
         "type": "string",
         "default": ""
+    },
+    {
+        "name": "Views",
+        "type": "int",
+        "default": 1
     }]
 }

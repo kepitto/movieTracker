@@ -4,6 +4,7 @@ public class MovieModel {
     private String movieName;
     private String genre;
     private float rating;
+    private int views;
 
     public String getMovieName() {
         return movieName;
@@ -27,5 +28,13 @@ public class MovieModel {
 
     public void setRating(float rating) {
         this.rating = rating;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
     }
 }

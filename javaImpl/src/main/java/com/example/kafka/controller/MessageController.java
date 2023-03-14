@@ -25,6 +25,7 @@ public class MessageController {
         movie.setMovieName(model.getMovieName());
         movie.setGenre(model.getGenre());
         movie.setRating(model.getRating());
+        movie.setViews(model.getViews());
         movie.setId(UUID.randomUUID().toString());
         kafkaProducer.sendMessage(movie);
         return ResponseEntity.ok("Message sent to the topic");
