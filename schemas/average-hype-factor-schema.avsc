@@ -1,0 +1,19 @@
+{
+    "type": "record",
+    "name": "AverageHypeFactor",
+    "namespace": "com.example.kafka.schema",
+    "fields": [
+    {
+        "name": "hypeFactor",
+        "type": {
+            "type": "array",
+            "items": "float"
+        },
+        "default": []
+    },
+    {
+        "name": "AverageHypeFactor",
+        "type": "double",
+        "default": 0
+    }]
+}
