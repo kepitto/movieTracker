@@ -50,8 +50,8 @@ public class KafkaConsumer {
         kafkaTemplate.send("AVERAGE_HYPE_FACTOR_UPDATED", avgHypeFactorObj);
     }
 
-    @KafkaListener(topics="AVERAGE_HYPE_FACTOR_UPDATED", groupId = "movieConsumerGroup")
-    public void consume(AverageHypeFactor hypeFactor){
-        LOGGER.info(String.format("HypeFactor received is: %s", hypeFactor));
-    }
+//    @KafkaListener(topics="AVERAGE_HYPE_FACTOR_UPDATED", groupId = "movieConsumerGroup")
+//    public void consume(AverageHypeFactor hypeFactor){
+//        LOGGER.info(String.format("HypeFactor received is: %s", hypeFactor));
+//    }
 }
