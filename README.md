@@ -39,10 +39,7 @@ Also use "mvn clean install" in order to generate the POJO files.
 
 ## Publish Data
 
-In order to publish some random movie data:  
-*./avroproducer.sh*  
-
-Or start the KafkaApplication and send your own Movies via http://localhost:8080/api/v1/kafka/sendMovie API  
+In order to publish some movie data start the KafkaApplication and send your own Movies via http://localhost:8080/api/v1/kafka/sendMovie API  
 with example json:  
 {  
 "movieName":"TEST",  
@@ -61,4 +58,4 @@ compatibility mode selected. In the case of AVRO, the schema validation process 
 registry to validate the schema against the compatibility mode selected. We use Full compatibility mode
 which means a new schema is fully compatible with an old schema if its backward and forward compatible.  
 Backward means we can delete fields and add optional fields and Forward means we can Add fields and delete  
-optional fields.
+optional fields. Therefore with Full compatibility adding and deleting optional fields is allowed.
