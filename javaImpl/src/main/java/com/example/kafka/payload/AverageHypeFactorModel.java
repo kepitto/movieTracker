@@ -1,26 +1,29 @@
 package com.example.kafka.payload;
 
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.util.List;
 
+@Entity
 public class AverageHypeFactorModel {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private List<Float> hypeFactor;
 
     private double averageHypeFactor;
 
-    public AverageHypeFactorModel(Long id, List<Float> hypeFactor, double averageHypeFactor) {
-        this.id = id;
-        this.hypeFactor = hypeFactor;
-        this.averageHypeFactor = averageHypeFactor;
+    public AverageHypeFactorModel() {
     }
 
-    public AverageHypeFactorModel(List<Float> hypeFactor, double averageHypeFactor) {
+    public AverageHypeFactorModel(Long id, List<Float> hypeFactor, double averageHypeFactor) {
+        this.id = id;
         this.hypeFactor = hypeFactor;
         this.averageHypeFactor = averageHypeFactor;
     }

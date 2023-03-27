@@ -23,7 +23,6 @@ public class AverageHypeFactorConsumer {
     public void consume(AverageHypeFactor hypeFactor){
         LOGGER.info(String.format("HypeFactor received is: %s", hypeFactor));
         AverageHypeFactorModel averageHypeFactorModel = new AverageHypeFactorModel(0L, hypeFactor.getHypeFactor(), hypeFactor.getAverageHypeFactor());
-        LOGGER.info(String.format("HypeFactor transformed to Model is: %s", averageHypeFactorModel));
         try {
             averageHypeFactorService.saveAveragHypeFactorModel(averageHypeFactorModel);
         } catch(Exception e){

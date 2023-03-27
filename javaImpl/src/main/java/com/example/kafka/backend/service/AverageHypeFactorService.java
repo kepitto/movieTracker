@@ -19,9 +19,10 @@ public class AverageHypeFactorService {
         this.averageHypeFactorRepository = averageHypeFactorRepository;
     }
 
-    public void saveAveragHypeFactorModel(AverageHypeFactorModel averageHypeFactorModel) {
-        LOGGER.info("Save the Hype stuff: " + averageHypeFactorModel);
-        averageHypeFactorRepository.save(averageHypeFactorModel);
+
+    public void saveAveragHypeFactorModel(AverageHypeFactorModel model) {
+        LOGGER.info("Database - Save the model: {}", model);
+        averageHypeFactorRepository.save(model);
     }
 
     public List<AverageHypeFactorModel> getAllHype() {
