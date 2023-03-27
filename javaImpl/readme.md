@@ -1,8 +1,7 @@
 To start the application:
 
 1. docker-compose up
-2. docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
-3. Run KafkaApplication
+2. Run KafkaApplication
 
 To input data with postman:
 
