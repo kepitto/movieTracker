@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AverageHypeFactorModel, HypeServiceService} from "./hype-service.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  avgHypeFactorList: AverageHypeFactorModel[] | undefined;
+  constructor(private hypeService: HypeServiceService) {
+  }
+
+  ngOnInit() {
+    this.loadAvgHype();
+  }
+
+  loadAvgHype() {
+    this.hypeService.getHype().subscribe((models) => {
+      this.avgHypeFactorList = models;
+    });
+  }
 }
